@@ -43,10 +43,10 @@ function scrub(e) {
   video.currentTime = scrubTime;
 }
 
-let isNotFullScreen = (document.fullscreenElement === null)       ||
-                      (document.msFullscreenElement === null)     ||
+let isNotFullScreen = (document.fullscreenElement       === null) ||
+                      (document.msFullscreenElement     === null) ||
                       (document.webkitFullscreenElement === null) ||
-                      (document.mozFullScreenElement === null);
+                      (document.mozFullScreenElement    === null);
 
 function toggleFullScreen() {
   if (isNotFullScreen) {
