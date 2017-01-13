@@ -1,12 +1,7 @@
+const bandsForm = document.querySelector("#bands");
 const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean',
                'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts',
                'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
-
-console.log(bands.map((band, i) => {
-  const allBands = [];
-  [...allBands,checkWord(band)];
-  return allBands;
-}));
 
 function checkWord(bandName) {
   const wordsLength = bandName.length;
@@ -25,3 +20,23 @@ function checkWord(bandName) {
            }
   }
 }
+
+const allBands = [];
+
+bands.map((band) => {
+  allBands.push(checkWord(band));
+});
+
+const sortedBands = allBands.sort((a, b) => a.afterArticle > b.afterArticle ? 1 : -1);
+
+bandsForm.innerHTML = sortedBands.map((name) => {
+  if (name.article.length === 0) {
+    return `
+      <li>${name.afterArticle}</li>
+    `;
+  } else {
+    return `
+      <li>${name.article} ${name.afterArticle}</li>
+    `;
+  }
+}).join('');
