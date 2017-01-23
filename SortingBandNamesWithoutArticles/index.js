@@ -7,13 +7,13 @@ const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'N
 // function checkWord(bandName) {
 //   const wordsLength = bandName.length;
 //   const bandWords = bandName.split(' ');
-//
+
 //   if (bandWords[0] === 'The' || bandWords[0] === 'A' || bandWords[0] === 'An') {
 //     return {
 //             article: bandWords[0],
 //             afterArticle: bandWords.slice(1, wordsLength).join(' ')
 //            };
-//
+
 //   } else {
 //     return {
 //             article: '',
@@ -21,15 +21,15 @@ const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'N
 //            }
 //   }
 // }
-//
+
 // const allBands = [];
-//
+
 // bands.map((band) => {
 //   allBands.push(checkWord(band));
 // });
-//
+
 // const sortedBands = allBands.sort((a, b) => a.afterArticle > b.afterArticle ? 1 : -1);
-//
+
 // bandsForm.innerHTML =  sortedBands.map((name) => {
 //   if (name.article.length === 0) {
 //     return `
