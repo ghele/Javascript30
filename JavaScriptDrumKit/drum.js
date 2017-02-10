@@ -5,7 +5,6 @@ function playSound(e) {
   audio.currentTime = 0;  // rewind to the start
   audio.play();
   key.classList.add('playing');  // remove, toggle a class
-  console.log("qwefg");
 }
 
 function removeTransition(e) {
